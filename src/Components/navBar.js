@@ -14,7 +14,11 @@ const NavbarContainer = styled.div`
   align-items: center;
   padding: 1rem;
 `;
-
+const HeadingContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+ 
+`;
 const NavbarTitle = styled.h1`
   margin: 0;
   text-transform: uppercase;
@@ -32,16 +36,6 @@ const NavbarLinks = styled.ul`
   gap: 1rem;
 `;
 
-const NavbarLink = styled.li`
-    text-decoration: none;
-    color: #777; /* Grey font color */
-    transition: color 0.3s; /* Smooth color transition */
-    
-    &:hover {
-      color: black; /* Black font color on hover */
-    }
-  
-`;
 
 const StyledLink = styled.li`
   text-decoration: none;
@@ -59,21 +53,25 @@ const Navbar = () => {
   return (
     <Nav>
       <NavbarContainer>
-        <div style={{display: 'flex', flexDirection: 'column'}}>
-        <NavbarTitle>Paul Cain</NavbarTitle>
-        <NavbarSubTitle>Video Production Portfolio</NavbarSubTitle>
-        </div>
+        <HeadingContainer>
+            <NavbarTitle>Paul Cain</NavbarTitle>
+            <NavbarSubTitle>Video Production Portfolio</NavbarSubTitle>
+        </HeadingContainer>
         <NavbarLinks>
-          <NavbarLink>
+        
+            <Link href="/" style={{textDecoration: 'none'}}>
+              <StyledLink>Work</StyledLink>
+            </Link>
+         
+         
             <Link href="/about" style={{textDecoration: 'none'}}>
               <StyledLink>About</StyledLink>
             </Link>
-          </NavbarLink>
-          <NavbarLink>
+         
             <Link href="/contact" style={{textDecoration: 'none'}}>
               <StyledLink>Contact</StyledLink>
             </Link>
-          </NavbarLink>
+        
         </NavbarLinks>
       </NavbarContainer>
     </Nav>
