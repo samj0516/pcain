@@ -16,13 +16,23 @@ import fetch from 'node-fetch'
 //   console.log(filmCredits)
 //   return filmCredits
 // };
-const repositoryName = "pcainportfolio";
-const client = prismic.createClient(repositoryName, {fetch});
-const init = async () => {
-    const credits= await client.getAllByType('film_credit')
-    console.log(credits)
+// const repositoryName = "pcainportfolio";
+// const client = prismic.createClient(repositoryName, {fetch});
+// const init = async () => {
+//     const credits= await client.getAllByType('film_credit')
+//     console.log(credits)
   
-    const firstPageDescriptionAsHTML = prismic.asHTML(credits[0].data.title)
+//     const firstPageDescriptionAsHTML = prismic.asHTML(credits[0].data.title)
+//   }
+  
+//   init()
+
+export async function getFilmCredits() {
+    const repositoryName = "pcainportfolio";
+    const client = prismic.createClient(repositoryName);
+    const filmCredits = await client.getAllByType("film_credit");
+    console.log(filmCredits)
+    
+  
+    return filmCredits ;
   }
-  
-  init()

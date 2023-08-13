@@ -6,6 +6,8 @@ const Nav = styled.nav`
   background-color: white;
   color: black;
   padding-bottom: 1rem;
+  padding-left: 20px;
+  padding-right: 20px;
 `;
 
 const NavbarContainer = styled.div`
@@ -24,7 +26,7 @@ const NavbarTitle = styled.h1`
   text-transform: uppercase;
 `;
 
-const NavbarSubTitle = styled.h1`
+const NavbarSubTitle = styled.h2`
   margin: 0;
   text-transform: uppercase;
   color: #777;

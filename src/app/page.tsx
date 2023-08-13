@@ -2,7 +2,7 @@ import Image from 'next/image'
 // import { createClient } from "../prismicio";
 import * as prismic from "@prismicio/client";
 import Card from '../Components/filmImageCard'
-
+// import { getFilmCredits } from "/Users/samanthacampbell/Projects/pcain/src/app/prismic"
 
 export async function getData() {
   const repositoryName = "pcainportfolio";
