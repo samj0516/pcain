@@ -18,7 +18,7 @@ export default async function Home() {
   const filmCredits = await getData();
   console.log(filmCredits.map((filmCredit) => (filmCredit.data.title[0].text)))
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }} >
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop:'5rem' }} >
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'center' }}>
      {filmCredits.map((filmCredit) => (
      <Card
